@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C++",
+            "type": "shell",
+            //"command": "C:/MinGWGCC/mingw64/bin/g++.exe",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                // Include directory
+                "-I", "C:\\include",
+                //"-I", "C:/Lib/site-packages/numpy/_core/include",
+                //"-I", "C:/Users/Dell/github_proj/matplotlib-cpp",
+                // Library directory
+                //"-L", "C:\\libs",
+                // Link Python library (adjust for your Python version)
+                //"-lpython"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
